@@ -1,5 +1,5 @@
 ---
-title: Developer Productivity slides
+title: Developer Productivity slides - Vim (Vi IMproved)
 author: F.Borowiec
 date: 2021-12-16
 extensions:
@@ -21,11 +21,11 @@ https://www.github.com/FBorowiec/developer_productivity
 
 Prerequisites:
 
-A Linux OS
+**A Linux OS**
 ---
 # Imtroduction (Introduction improved)
 
-## Why do I use VIM?
+## Why use VIM?
 
 ### Mastering your editing tool
 
@@ -155,12 +155,77 @@ _setup presentation_
 * `<leader>fg` - Telescope grep
 * `<C-q>` - Add results to quickfix list
 * `:cfdo %s/ORIGINAL/REPLACEMENT/g | update` - replace within the qf-list
-
 ---
 # Macros
 
 * Record a macro using `q` + letter: `qd` - records to the register called `d`.
 * Stop recording by pressing `q` in normal mode.
 * Run macro n times using `19@d` - runs macro 19 times.
+---
+## Simple macro replace
 
+### First using sed
+
+```cpp
+if (some_value == "some_other_value1") {
+    return 1
+} else if (some_value == "some_other_value2") {
+    return 2
+} else if (some_value == "some_other_value3") {
+    return 3
+} else if (some_value == "some_other_value4") {
+    return 4
+} else if (some_value == "some_other_value5") {
+    return 5
+} else if (some_value == "some_other_value6") {
+    return 6
+} else if (some_value == "some_other_value7") {
+    return 7
+} else if (some_value == "some_other_value8") {
+    return 8
+} else if (some_value == "some_other_value9") {
+    return 9
+} else if (some_value == "some_other_value10") {
+    return 10
+} else if (some_value == "some_other_value11") {
+    return 11
+} else if (some_value == "some_other_value12") {
+    return 12
+} else if (some_value == "some_other_value13") {
+    return 13
+} else if (some_value == "some_other_value14") {
+    return 14
+} else if (some_value == "some_other_value15") {
+    return 15
+} else if (some_value == "some_other_value16") {
+    return 16
+} else if (some_value == "some_other_value17") {
+    return 17
+} else if (some_value == "some_other_value18") {
+    return 18
+} else if (some_value == "some_other_value19") {
+    return 19
+} else if (some_value == "some_other_value20") {
+    return 20
+}
+```
+
+* Visually select the code
+* Press `:` -> `:'<,'>`
+* `:'<,'>s/.*"\(.*\)".*/case "\1":`
+---
+### Using a macro
+
+* `qd` - record macro to `d`
+* `0` - go to beginning of the line
+* `dt"` - delete to `"`
+* `f"` - find `"`
+* `l` - move on character to the right
+* `D` / `d$` - delete till end of line
+* `A` - append at the end of the line
+* type `:` - text to append
+* `I` - insert at beginning of line
+* type `case` - text to insert
+* `jj` - move to lines below
+* `q` - finish recording
 ---

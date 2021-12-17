@@ -6,5 +6,10 @@
 2. Tmux
 3. zsh
 4. Handy linux commands
-5. Dotfiles -> Stow -> Ansible
+5. Dotfiles management
 6. DWM
+
+Prerequisites:
+
+* A linux OS
+* Familiarity with regexes

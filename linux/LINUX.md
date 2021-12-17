@@ -1,4 +1,20 @@
 ---
+title: Developer Productivity slides - Linux
+author: F.Borowiec
+date: 2021-12-16
+extensions:
+    - qrcode
+    - image_ueberzug
+styles:
+    style: paraiso-dark
+    table:
+        column_spacing: 3
+        header_divider: "-"
+---
+# Use case
+
+_Find all files in the repository with the word `simple-` and rename them to `simple\_`._
+---
 # Find
 
 Find all files in the repository matching the `*simple*` string:
@@ -16,9 +32,11 @@ _Output:_
 
 We will need the `mv` command.
 
-## First step
+## Sed
 
 `find ./**/*simple-* | sed 's/simple-/simple_/'`
+
+_Tip:_ use `\c` (case insensitive) or `\c` for case sensitive.
 
 _Output:_
 
@@ -30,7 +48,7 @@ _Output:_
 
 The `mv` command though needs the source AND destination!
 
-## Sed
+## Sed with group matching
 
 `\(.*\)` - match EVERYTHING inside sed and match them into a group accessible with `\1..n`
 
@@ -43,7 +61,7 @@ _Output:_
 ./linux/examples/some/deeply/nested/simple-folder2 ./linux/examples/some/deeply/nested/simple_folder2
 ./linux/examples/some/deeply/nested/simple-folder3 ./linux/examples/some/deeply/nested/simple_folder3
 ```
-
+---
 ## Xargs
 
 Now let's pass that result to `mv` using `xargs`:
@@ -66,7 +84,7 @@ _Output:_
 ./linux/examples/files/scattered/all/over/the/random_file3
 ./linux/examples/files/scattered/random_file6
 ```
-
+---
 ## Use `printf`
 
 `find ./**/random_file* -printf "%p"`
@@ -100,7 +118,7 @@ Notice we have the whole path on the left and just the name on the right. This a
 directory changing what comes before `%f`.
 
 `find ./**/random_file* -printf "%p ./linux/examples/empty_folder/%f\n" | xargs -n 2 cp`
-
+---
 Then:
 
 `ls linux/examples/empty_folder | grep random`
