@@ -141,3 +141,4 @@ random_file6
 # `cht.sh`
 
 `curl cht.sh/python/lambda`
+---

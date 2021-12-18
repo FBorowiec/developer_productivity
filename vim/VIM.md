@@ -10,40 +10,48 @@ styles:
     table:
         column_spacing: 3
         header_divider: "-"
+
 ---
 # VIM
 
 ![65](images/vim.jpg)
 
 ---
-# Where to find everything that will be presented
-
-Github: [github.com/FBorowiec](https://www.github.com/FBorowiec)
-
-```qrcode
-https://www.github.com/FBorowiec/developer_productivity
-```
-
-Prerequisites:
-
-**A Linux OS**
----
----
 # Imtroduction (Introduction improved)
 
 ## Why use VIM?
 
-### Mastering your editing tool
+### Mastering your tools
 
-INSERT THE PRAGMATIC PROGRAMMER QUOTE HERE
+_The Pragmatic Programmer_:
 
+_Many programmers make the mistake of adopting a single power tool, such as a particular integrated development
+enviroment (IDE), and never leave its cozy interface. This really is a mistake. You need to be comfortable beyond the
+limits imposed by an IDE. The only way to do this is to keep the basic tool set sharp and ready to use._
+
+_For a programmer manipulating files of text, that set of basic tools starts in the command shell.
+From the shell prompt you should be able to invoke your full repertoire of tools._
+
+_For programmers raised on GUI interfaces and IDEs, this might seem an extreme position. After all, can't you do
+everyting by pointing and clicking?_
+
+_The simple answer is "no"._
+
+### Achieving editor fluency
+
+Why is this a big deal? Will you save lots of time? Actually YES.
+
+---
+# Vim vs the others
 ![25](images/learning_curves.jpg)
+
+### Configurable
 
 It's highly configurable and you can have an editor that's just like you want it.
 
 BUT it's a long term investment.
 
-INSERT HERE MASTERING CURVE
+![25](images/mastering_curve.png)
 
 ### Speed
 
@@ -52,7 +60,7 @@ That's it essentially - you won't be a better programmer, you'll be faster.
 ### LSP
 
 Any language with a language server protocol can have their LSP used by VIM.
----
+
 ---
 # Flavors of VIM
 
@@ -60,7 +68,37 @@ Any language with a language server protocol can have their LSP used by VIM.
 * NeoVim
 * SpaceVim
 * LunarVim
+
 ---
+# Are you ready?
+
+* This is a journey, not a day trip
+* The journey is uphill
+* The top of the mountain is incredible
+
+---
+# How to start
+
+1. `vimtutor`, `VimBeGood` is you get NeoVim
+2. VIM extension in VS Code or CLion
+3. Create your own setup
+4. Check vim communities for latest trends ([r/neovim](https://www.reddit.com/r/neovim/), [r/vim](https://www.reddit.com/r/vim/))
+5. Discord channel [discord.gg/3ujcVMe](https://discord.com/invite/3ujcVMe)
+6. Youtube channels: [youtube.com/ThePrimeagen](https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw)
+
+---
+# Vim modes
+
+* Normal `<esc>`
+* Insert `i`
+* Visual
+  * Visual line `<S-v>`
+  * Visual block `<C-v>`
+* Command `:`
+* Window `<C-w>`
+* Replace `R` <-- I never use it
+* Ex <-- nobody knows what's it for
+
 ---
 # Fundamentals - Files, Buffers, Windows, Splits
 
@@ -86,35 +124,9 @@ You can create a vertical split by using:
 `<C-w>v`
 
 And a horizontal one by using:
+
 `<C-w>s`
----
-# Are you ready?
 
-* This is a journey, not a day trip
-* The journey is uphill
-* The top of the mountain is incredible
----
-# How to start
-
-1. `vimtutor`
-2. VIM extension in VS Code or CLion
-3. Create your own setup
-4. Check vim communities for latest trends ([r/neovim](https://www.reddit.com/r/neovim/), [r/vim](https://www.reddit.com/r/vim/))
-5. Discord channel [](https://discord.com/invite/3ujcVMe)
-6. Youtube channels:
-
----
-# Vim modes
-
-* Normal `<esc>`
-* Insert `i`
-* Visual
-  * Visual line `<S-v>`
-  * Visual block `<C-v>`
-* Command `:`
-* Window `<C-w>`
-* Replace `R` <-- I never use it
-* Ex <-- nobody knows what's it for
 ---
 # Basic
 
@@ -130,13 +142,13 @@ DON'T USE YOUR MOUSE AND DON'T USE ARROWS
 
 `<C-o>`, `<C-i>` - move to prev/next change (jumplist)
 
-`<C-d>`, `<C-u>` - page up/down
+`<C-d>`, `<C-u>` - half page up/down (predictable)
 
-`{`, `}` - move through a block of code
+`{`, `}` - move through a block of code (OVERWRITES THE JUMPLIST)
 
 `%` - move from `<,(,{,[` to `>,),},]`
 
-`f, t, F, T` - find character
+`f, t, F, T` - find character, then `;` or `,` to move over results
 
 `/` - search, then `n, N`
 
@@ -148,28 +160,35 @@ DON'T USE YOUR MOUSE AND DON'T USE ARROWS
 
 ## Entering insert mode
 
-`i, I, a, A, o, O, c, C`, insert, append, line below, change
+`i, I, a, A, o, O, c, C, S`, insert, append, line below, change, replace line
 
-## Relative numbers / Combining numbers with commands
+## Relative numbers / Combining commands
 
-`10j`
-`6dd`
+* `10j` - go down 10 lines
+* `6dd` - delete 6 lines
+* `di}` - delete everything inside the `{ ... }` brackets
+* `ci(` - change everything inside the `( ... )` brackets
+* `viw` - select word
+
 ---
 # `init.lua` or `init.vim`
 
 _setup presentation_
+
 ---
 # Quickfix
 
 * `<leader>fg` - Telescope grep
 * `<C-q>` - Add results to quickfix list
 * `:cfdo %s/ORIGINAL/REPLACEMENT/g | update` - replace within the qf-list
+
 ---
 # Macros
 
 * Record a macro using `q` + letter: `qd` - records to the register called `d`.
 * Stop recording by pressing `q` in normal mode.
 * Run macro n times using `19@d` - runs macro 19 times.
+
 ---
 ## Simple macro replace
 
@@ -222,6 +241,7 @@ if (some_value == "some_other_value1") {
 * Visually select the code
 * Press `:` -> `:'<,'>`
 * `:'<,'>s/.*"\(.*\)".*/case "\1":`
+
 ---
 ### Using a macro
 
@@ -237,6 +257,7 @@ if (some_value == "some_other_value1") {
 * type `case` - text to insert
 * `jj` - move to lines below
 * `q` - finish recording
+
 ---
 # Registers
 
@@ -253,16 +274,48 @@ All registers are accessible via `"` -> register identifier `a` (register `a`) -
 
 ## Register exercise
 
-Exercise 1:
+_Exercise 1:_
 
 * Visually select a line
 * `"by` - yank to register `b`
 * `"dp` - paste macro registered under `d`
 * Edit and rewrite the registered macro under another register
 
-Exercise 2:
+_Exercise 2:_
 
 * Type a macro without registering it into any register
 * Register the macro by yanking the line you wrote it in
 * Use the macro
+
 ---
+# Generally recommended plugins
+
+* `tope/vim-fugitive`
+* `tjdevries/telescope.nvim`
+* `neovim/lspconfig`
+* `kyazdani42/nvim-tree.lua`
+* `nvim-treesitter/nvim-treesitter`
+
+## My recommendations
+
+* `voldikss/vim-floaterm`
+* `ThePrimeagen/harpoon`
+* `romgrk/barbar.nvim`
+* `folke/which-key.nvim`
+* Some cool colorscheme
+
+
+## For Bazel
+
+* `google/vim-maktaba`
+* `bazelbuild/vim-bazel`
+* `alexander-born/bazel-vim`
+* `grailbio/bazel-compilation-database`
+
+---
+# BONUS
+
+Browser extensions:
+
+* Trydactyl for Firefox
+* Vimium for chromium-based browsers
