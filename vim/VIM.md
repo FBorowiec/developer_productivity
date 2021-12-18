@@ -11,6 +11,11 @@ styles:
         column_spacing: 3
         header_divider: "-"
 ---
+# VIM
+
+![65](images/vim.jpg)
+
+---
 # Where to find everything that will be presented
 
 Github: [github.com/FBorowiec](https://www.github.com/FBorowiec)
@@ -22,6 +27,7 @@ https://www.github.com/FBorowiec/developer_productivity
 Prerequisites:
 
 **A Linux OS**
+---
 ---
 # Imtroduction (Introduction improved)
 
@@ -47,6 +53,7 @@ That's it essentially - you won't be a better programmer, you'll be faster.
 
 Any language with a language server protocol can have their LSP used by VIM.
 ---
+---
 # Flavors of VIM
 
 * VIM - Vi IMproved
@@ -54,9 +61,6 @@ Any language with a language server protocol can have their LSP used by VIM.
 * SpaceVim
 * LunarVim
 ---
-# First steps
-
-`vimtutor`
 ---
 # Fundamentals - Files, Buffers, Windows, Splits
 
@@ -94,6 +98,11 @@ And a horizontal one by using:
 
 1. `vimtutor`
 2. VIM extension in VS Code or CLion
+3. Create your own setup
+4. Check vim communities for latest trends ([r/neovim](https://www.reddit.com/r/neovim/), [r/vim](https://www.reddit.com/r/vim/))
+5. Discord channel [](https://discord.com/invite/3ujcVMe)
+6. Youtube channels:
+
 ---
 # Vim modes
 
@@ -228,4 +237,32 @@ if (some_value == "some_other_value1") {
 * type `case` - text to insert
 * `jj` - move to lines below
 * `q` - finish recording
+---
+# Registers
+
+Access using `:reg`
+
+Think of it as a dictionary where you can put what you want.
+
+All registers are accessible via `"` -> register identifier `a` (register `a`) -> action `p` (paste)
+
+1. Yank a line.
+2. Locate it in the registers (yes it's under `""` <- the default register where all yanks go).
+3. Now yank another line into register `a`: (`"ay`).
+4. See your newly yanked selection under the `""` and `"a` registers.
+
+## Register exercise
+
+Exercise 1:
+
+* Visually select a line
+* `"by` - yank to register `b`
+* `"dp` - paste macro registered under `d`
+* Edit and rewrite the registered macro under another register
+
+Exercise 2:
+
+* Type a macro without registering it into any register
+* Register the macro by yanking the line you wrote it in
+* Use the macro
 ---
