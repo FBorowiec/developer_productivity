@@ -70,8 +70,8 @@ Soft skills | Dev productivity | Hard skills
 1. Vim
 2. Ansible
 3. Dotfiles
-4. Tmux
-5. Zshell
+4. Zshell
+5. Tmux
 6. Linux core utils
 7. DWM
 

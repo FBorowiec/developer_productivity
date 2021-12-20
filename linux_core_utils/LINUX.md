@@ -1,5 +1,5 @@
 ---
-title: Developer Productivity slides - Linux
+title: Developer Productivity slides - Linux core utils
 author: F.Borowiec
 date: 2021-12-16
 extensions:
