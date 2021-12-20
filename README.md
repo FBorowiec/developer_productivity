@@ -74,6 +74,7 @@ Soft skills | Dev productivity | Hard skills
 5. Tmux
 6. Linux core utils
 7. DWM
+8. Git worktrees
 
 Prerequisites:
 
