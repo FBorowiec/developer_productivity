@@ -46,12 +46,68 @@ Make sure you are inside the `ansible` folder!
 
 ## Run first ansible task from within the container
 
-* `ansible-playbook local.yml`
+* `ansible-playbook local_1.yml`
 * Enter `zsh`
 
 ---
-# Step
+# Step 3
 
-TODO:
-Using tags
-OS dependent commands
+## Install `Bazel` using `npm`
+
+Adding `node`, `npm` and `bazel`.
+
+* `ansible-playbook local_2.yml`
+
+Install will fail! Ansible is trying to reinstall `zsh` etc.
+
+---
+# Step 4
+
+## Use tags
+
+Tagging `local_3.yml`.
+
+* `ansible-playbook -t node local_3.yml`
+
+As you can see you could also specify a different package manager or make a different version for a different OS.
+
+---
+# Step 5
+
+## Making a file per task
+
+Create a directory tasks and a task file for each task you need.
+
+* `ansible-playbook -t node local_4.yml`
+
+---
+# Ansible playbook vs pull
+
+If you have a `local.yml` file on your git repository you don't even need to clone your repo in order to use
+`ansible-playbook`. You can do:
+
+`sudo ansible-pull -U https://github.com/YourRepoWithAnsible.git`
+
+---
+# Where Ansible shines!
+
+* `ansible-vault encrypt testfile`
+
+Now your file is encrypted with a quantum secure `AES256` algorithm!
+
+* `ansible-vault decrypt testfile`
+
+_Type in your super secure password..._
+
+---
+# SSH keys
+
+* `ansible-playbook -t ssh --ask-vault-pass local_5.yml`
+* `cat ~/.ssh/id_rsa`
+
+---
+# Backup codes
+
+You can do the same thing with your backup codes!
+
+![40](images/authenticator.png)

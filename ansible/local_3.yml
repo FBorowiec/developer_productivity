@@ -1,0 +1,44 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+      - zsh
+      - node
+      - bazel
+  tasks:
+  - name: Install zsh
+    apt: name=zsh
+    tags:
+    - zsh
+  - name: Change shell
+    shell: chsh -s `which zsh`
+    tags:
+    - zsh
+  - name: Install ohmyzsh
+    shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+    tags:
+    - zsh
+  - name: Install the zsh plugin
+    ansible.builtin.git:
+      repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+      dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+    tags:
+    - zsh
+  - name: update zsrhc
+    shell: sed -i 's/(git/(git zsh-autosuggestions/' ~/.zshrc
+  - name: install node
+    apt:
+      name: ['nodejs', 'npm']
+    tags:
+    - node
+  - name: Install Bazel
+    npm:
+      name: "@bazel/bazelisk"
+      global: true
+    tags:
+    - node
+    - bazel
+

@@ -1,0 +1,8 @@
+- name: Install Bazel
+  npm:
+    name: "@bazel/bazelisk"
+    global: true
+  tags:
+  - node
+  - bazel
+
