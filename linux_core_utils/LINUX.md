@@ -133,12 +133,19 @@ random_file4
 random_file5
 random_file6
 ```
+
 ---
 # The magic build command for catching errors
 
 `bazel build //path/to:target 2>&1 | grep -ie error\: -C0`
----
-# `cht.sh`
 
-`curl cht.sh/python/lambda`
 ---
+# Utils everyone needs to be familiar with
+
+* `cat`
+* `grep`
+* `echo`
+* `tr`
+* `read`
+* `sed`
+
