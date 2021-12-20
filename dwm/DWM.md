@@ -1,5 +1,5 @@
 ---
-title: Developer Productivity slides - Dotfiles
+title: Developer Productivity slides - Windows managers
 author: F.Borowiec
 date: 2021-12-16
 extensions:
