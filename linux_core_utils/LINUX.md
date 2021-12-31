@@ -149,3 +149,12 @@ random_file6
 * `read`
 * `sed`
 
+---
+# Other cools commands
+
+1. Redo last commandas root: `sudo !!`
+2. Open an editor to run a command: `ctrl+x+e`
+3. Precede a command with a leading space to avoid command going to history
+4. Fix a long command you just messed up: `fc`
+5. Quickly create folder: `mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}` or ` mkdir -p folder/{1..100}`
+6. Super fast ram disk: `mkdir -p /mnt/ram && mount -t tmpfs tmpfs /mnt/ram -o size=8192M`
