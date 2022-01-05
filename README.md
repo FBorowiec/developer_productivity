@@ -10,6 +10,7 @@ styles:
     table:
         column_spacing: 3
         header_divider: "-"
+
 ---
 # Where to find everything that will be presented
 
@@ -22,6 +23,7 @@ https://www.github.com/FBorowiec/developer_productivity
 Prerequisites:
 
 **A Linux OS**
+
 ---
 # Introduction
 
@@ -43,23 +45,27 @@ Goals of a Pragmatic Programmer
 * Learning at least one new language every year
 * Read a technical book a month
 * Experiment with different environments
+
 ---
 # Typical user experience
 
 * IDE
 
-![25](images/typical_ide_experience.jpg)
+![45](images/typical_ide.png)
 
+---
 * Terminal management
 
-![25](images/typical_terminal_experience.jpg)
+![45](images/typical_terminal.png)
 
 
+---
 * Window management
 
-![25](images/typical_windows_experience.jpg)
+![45](images/typical_windows_experience.png)
 
 So much overhead!
+
 ---
 # Developer productivity - all the things that separate you form working
 
@@ -67,6 +73,7 @@ Soft skills | Dev productivity | Hard skills
 
 ## Topics
 
+0. Fast typing
 1. Vim
 2. Ansible
 3. Dotfiles
@@ -80,4 +87,9 @@ Prerequisites:
 
 * A linux OS
 * Familiarity with regexes
+
 ---
+# Fast typing
+
+![35](images/slow_typing.jpg)
+![25](images/monkeytype.png)
