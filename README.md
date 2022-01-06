@@ -67,7 +67,7 @@ Goals of a Pragmatic Programmer
 So much overhead!
 
 ---
-# Developer productivity - all the things that separate you form working
+# Developer productivity - all the things that separate you from working
 
 Soft skills | Dev productivity | Hard skills
 
@@ -91,5 +91,12 @@ Prerequisites:
 ---
 # Fast typing
 
-![35](images/slow_typing.jpg)
+![30](images/slow_typing.jpg)
+![35](images/fingers_placement.png)
+
+
+---
+# Fast typing
+
+![40](images/monkeytype_example.png)
 ![25](images/monkeytype.png)
