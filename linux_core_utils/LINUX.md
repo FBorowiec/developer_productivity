@@ -13,7 +13,7 @@ styles:
 ---
 # Use case
 
-_Find all files in the repository with the word `simple-` and rename them to `simple\_`._
+_Find all files in the repository with the word simple- and rename them to simple\__
 ---
 # Find
 

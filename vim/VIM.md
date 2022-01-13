@@ -79,7 +79,7 @@ Any language with a language server protocol can have their LSP used by VIM.
 ---
 # How to start
 
-1. `vimtutor`, `VimBeGood` is you get NeoVim
+1. `vimtutor`, `VimBeGood` if you get NeoVim
 2. VIM extension in VS Code or CLion
 3. Create your own setup
 4. Check vim communities for latest trends ([r/neovim](https://www.reddit.com/r/neovim/), [r/vim](https://www.reddit.com/r/vim/))
@@ -290,7 +290,7 @@ _Exercise 2:_
 ---
 # Generally recommended plugins
 
-* `tope/vim-fugitive`
+* `tpope/vim-fugitive`
 * `tjdevries/telescope.nvim`
 * `neovim/lspconfig`
 * `kyazdani42/nvim-tree.lua`
