@@ -42,16 +42,20 @@ _The simple answer is "no"._
 Why is this a big deal? Will you save lots of time? Actually YES.
 
 ---
+
 # Vim vs the others
-![25](images/learning_curves.jpg)
+![35](images/learning_curves.jpg)
 
 ### Configurable
 
 It's highly configurable and you can have an editor that's just like you want it.
 
+---
+
+# Vim vs the others
 BUT it's a long term investment.
 
-![25](images/mastering_curve.png)
+![35](images/mastering_curve.png)
 
 ### Speed
 
@@ -62,6 +66,7 @@ That's it essentially - you won't be a better programmer, you'll be faster.
 Any language with a language server protocol can have their LSP used by VIM.
 
 ---
+
 # Flavors of VIM
 
 * VIM - Vi IMproved
@@ -69,14 +74,17 @@ Any language with a language server protocol can have their LSP used by VIM.
 * SpaceVim
 * LunarVim
 
+![20](images/lunarvim.png)
+![20](images/spacevim.png)
+
 ---
+
 # Are you ready?
 
 * This is a journey, not a day trip
 * The journey is uphill
 * The top of the mountain is incredible
 
----
 # How to start
 
 1. `vimtutor`, `VimBeGood` if you get NeoVim
@@ -87,6 +95,7 @@ Any language with a language server protocol can have their LSP used by VIM.
 6. Youtube channels: [youtube.com/ThePrimeagen](https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw)
 
 ---
+
 # Vim modes
 
 * Normal `<esc>`
@@ -100,6 +109,7 @@ Any language with a language server protocol can have their LSP used by VIM.
 * Ex <-- nobody knows what's it for
 
 ---
+
 # Fundamentals - Files, Buffers, Windows, Splits
 
 ## Buffers
@@ -128,6 +138,7 @@ And a horizontal one by using:
 `<C-w>s`
 
 ---
+
 # Basic
 
 ## Movements
@@ -171,11 +182,13 @@ DON'T USE YOUR MOUSE AND DON'T USE ARROWS
 * `viw` - select word
 
 ---
+
 # `init.lua` or `init.vim`
 
 _setup presentation_
 
 ---
+
 # Quickfix
 
 * `<leader>fg` - Telescope grep
@@ -183,6 +196,7 @@ _setup presentation_
 * `:cfdo %s/ORIGINAL/REPLACEMENT/g | update` - replace within the qf-list
 
 ---
+
 # Macros
 
 * Record a macro using `q` + letter: `qd` - records to the register called `d`.
@@ -190,6 +204,7 @@ _setup presentation_
 * Run macro n times using `19@d` - runs macro 19 times.
 
 ---
+
 ## Simple macro replace
 
 ### First using sed
@@ -243,6 +258,7 @@ if (some_value == "some_other_value1") {
 * `:'<,'>s/.*"\(.*\)".*/case "\1":`
 
 ---
+
 ### Using a macro
 
 * `qd` - record macro to `d`
@@ -259,6 +275,7 @@ if (some_value == "some_other_value1") {
 * `q` - finish recording
 
 ---
+
 # Registers
 
 Access using `:reg`
@@ -288,6 +305,7 @@ _Exercise 2:_
 * Use the macro
 
 ---
+
 # Generally recommended plugins
 
 * `tpope/vim-fugitive`
@@ -313,6 +331,7 @@ _Exercise 2:_
 * `grailbio/bazel-compilation-database`
 
 ---
+
 # BONUS
 
 Browser extensions:

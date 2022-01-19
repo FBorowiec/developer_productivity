@@ -91,12 +91,12 @@ Prerequisites:
 ---
 # Fast typing
 
-![30](images/slow_typing.jpg)
-![35](images/fingers_placement.png)
+![20](images/slow_typing.jpg)
+![25](images/fingers_placement.png)
 
 
 ---
 # Fast typing
 
-![40](images/monkeytype_example.png)
-![25](images/monkeytype.png)
+![30](images/monkeytype_example.png)
+![15](images/monkeytype.png)
