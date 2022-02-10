@@ -12,6 +12,7 @@ styles:
         header_divider: "-"
 
 ---
+
 # Where to find everything that will be presented
 
 Github: [github.com/FBorowiec](https://www.github.com/FBorowiec)
@@ -25,6 +26,7 @@ Prerequisites:
 **A Linux OS**
 
 ---
+
 # Introduction
 
 Course aimed at people who want to become more effective and more productive programmers.
@@ -47,6 +49,7 @@ Goals of a Pragmatic Programmer
 * Experiment with different environments
 
 ---
+
 # Typical user experience
 
 * IDE
@@ -54,12 +57,14 @@ Goals of a Pragmatic Programmer
 ![45](images/typical_ide.png)
 
 ---
+
 * Terminal management
 
 ![45](images/typical_terminal.png)
 
 
 ---
+
 * Window management
 
 ![45](images/typical_windows_experience.png)
@@ -67,6 +72,7 @@ Goals of a Pragmatic Programmer
 So much overhead!
 
 ---
+
 # Developer productivity - all the things that separate you from working
 
 Soft skills | Dev productivity | Hard skills
@@ -89,6 +95,7 @@ Prerequisites:
 * Familiarity with regexes
 
 ---
+
 # Fast typing
 
 ![20](images/slow_typing.jpg)
@@ -96,6 +103,7 @@ Prerequisites:
 
 
 ---
+
 # Fast typing
 
 ![30](images/monkeytype_example.png)

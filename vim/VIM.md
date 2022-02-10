@@ -3,6 +3,7 @@ title: Developer Productivity slides - Vim (Vi IMproved)
 author: F.Borowiec
 date: 2021-12-16
 extensions:
+    - terminal
     - qrcode
     - image_ueberzug
 styles:
@@ -12,11 +13,13 @@ styles:
         header_divider: "-"
 
 ---
+
 # VIM
 
 ![65](images/vim.jpg)
 
 ---
+
 # Imtroduction (Introduction improved)
 
 ## Why use VIM?
@@ -24,6 +27,8 @@ styles:
 ### Mastering your tools
 
 _The Pragmatic Programmer_:
+
+![25](images/the_pragmatic_programmer.jpeg)
 
 _Many programmers make the mistake of adopting a single power tool, such as a particular integrated development
 enviroment (IDE), and never leave its cozy interface. This really is a mistake. You need to be comfortable beyond the
@@ -107,6 +112,11 @@ Any language with a language server protocol can have their LSP used by VIM.
 * Window `<C-w>`
 * Replace `R` <-- I never use it
 * Ex <-- nobody knows what's it for
+
+```terminal35
+bash -il
+vimtutor
+```
 
 ---
 
