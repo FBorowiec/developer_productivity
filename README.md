@@ -33,6 +33,8 @@ Course aimed at people who want to become more effective and more productive pro
 
 **From "The Pragmatic Programmer"**:
 
+![20](images/the_pragmatic_programmer.jpeg)
+
 _What makes a Pragmatic Programmer?_
 
 * Early adopter/fast adapter
@@ -79,6 +81,7 @@ Soft skills | Dev productivity | Hard skills
 
 ## Topics
 
+```bash
 0. Fast typing
 1. Vim
 2. Ansible
@@ -88,6 +91,8 @@ Soft skills | Dev productivity | Hard skills
 6. Linux core utils
 7. DWM
 8. Git worktrees
+9. AI pair programming
+```
 
 Prerequisites:
 

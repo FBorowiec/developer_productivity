@@ -55,6 +55,10 @@ Why is this a big deal? Will you save lots of time? Actually YES.
 
 It's highly configurable and you can have an editor that's just like you want it.
 
+### LSP
+
+Any language with a language server protocol can have their LSP used by VIM.
+
 ---
 
 # Vim vs the others
@@ -65,10 +69,6 @@ BUT it's a long term investment.
 ### Speed
 
 That's it essentially - you won't be a better programmer, you'll be faster.
-
-### LSP
-
-Any language with a language server protocol can have their LSP used by VIM.
 
 ---
 
