@@ -15,15 +15,12 @@ styles:
 
 # Where to find everything that will be presented
 
-Github: [github.com/FBorowiec](https://www.github.com/FBorowiec)
-
-```qrcode
-https://www.github.com/FBorowiec/developer_productivity
-```
+Github: [github.com/FBorowiec/developer_productivity](https://www.github.com/FBorowiec/developer_productivity)
 
 Prerequisites:
 
-**A Linux OS**
+* **A Linux OS**
+* **Docker**
 
 ---
 
