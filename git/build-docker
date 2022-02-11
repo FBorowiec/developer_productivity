@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker rmi -f vim-computer 2> /dev/null
+docker build . -f Dockerfile -t vim-computer
