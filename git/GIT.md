@@ -43,11 +43,11 @@ Check current worktrees:
 
 Create a new directory with the specified branch checked out into it:
 
-`git worktree ad {{path/to/directory}} {{branch}}`
+`git worktree add {{path/to/directory}} {{branch}}`
 
 Create a new directory with a new branch checked out into it:
 
-`git worktree ad {{path/to/directory}} -b {{branch}}`
+`git worktree add {{path/to/directory}} -b {{branch}}`
 
 Remove a worktree (after deleting worktree directory):
 

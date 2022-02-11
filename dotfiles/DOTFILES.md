@@ -46,7 +46,7 @@ It's simple! -> it only manages simlinks (therefore is OS and version-able).
 * `stow nvim`
 * `find .`
 
-As you can see nothing changes under `target_dir`. But now check the `target_dir`.
+As you can see nothing changes under `stow_dir`. But now check the `target_dir`.
 
 * `cd ..`
 * `ls -la`
@@ -84,7 +84,7 @@ An example of `dotfiles.task`:
     - dotfiles
     - stow
 - name: Stow dotfiles
-  shell: cd $HOME/.dotfiles && ./ubuntu
+  shell: cd $HOME/.dotfiles && ./install
   tags:
     - install
     - dotfiles
@@ -92,33 +92,25 @@ An example of `dotfiles.task`:
 ```
 
 ---
-## `ubuntu`
-
-```bash
-#!/usr/bin/env zsh
-if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="nvim,tmux,zsh"
-fi
-
-if [[ -z $DOTFILES ]]; then
-    DOTFILES=$HOME/.dotfiles
-fi
-
-STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
-```
-
----
-## `install`
+# `install`
 
 ```zsh
-#!/usr/bin/env zsh
-pushd $DOTFILES
+#!/usr/bin/env bash
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="alacritty,discord,dwm,git,mutt,nvim,ranger,rofi-spotlight,scripts,spotify,terminator,tmux,zsh"
+fi
+
+if [[ -e $HOME/.zshrc ]]; then
+    rm $HOME/.zshrc
+fi
+
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     stow -D $folder
     stow $folder
 done
-popd
+
 ```
 
 **VERDICT**: Stow is better.

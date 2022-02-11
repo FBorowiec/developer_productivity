@@ -28,21 +28,20 @@ Ansible - a cloud configuration platform.
 
 Make sure you are inside the `ansible` folder!
 
-`./ansible-run.sh`
+To install Ansible locally use: `./ansible-install`
 
----
-# Step 1
+## Step 1
 
-## Build the docker image
+### Build the docker image
 
 `./build-docker`
 
-## Run the docker image
+### Run the docker image
 
 `docker run -it --rm new-computer /bin/bash`
 
 ---
-# Step 2
+# Step 2 - Zsh, oh-my-zsh, autocompletion
 
 ## Run first ansible task from within the container
 
@@ -50,7 +49,7 @@ Make sure you are inside the `ansible` folder!
 * Enter `zsh`
 
 ---
-# Step 3
+# Step 3 - Bazel
 
 ## Install `Bazel` using `npm`
 
@@ -58,10 +57,8 @@ Adding `node`, `npm` and `bazel`.
 
 * `ansible-playbook local_2.yml`
 
-Install will fail! Ansible is trying to reinstall `zsh` etc.
-
 ---
-# Step 4
+# Step 4 - Tags
 
 ## Use tags
 
@@ -72,7 +69,7 @@ Tagging `local_3.yml`.
 As you can see you could also specify a different package manager or make a different version for a different OS.
 
 ---
-# Step 5
+# Step 5 - Tasks
 
 ## Making a file per task
 
@@ -86,7 +83,7 @@ Create a directory tasks and a task file for each task you need.
 If you have a `local.yml` file on your git repository you don't even need to clone your repo in order to use
 `ansible-playbook`. You can do:
 
-`sudo ansible-pull -U https://github.com/YourRepoWithAnsible.git`
+`ansible-pull -U https://github.com/YourRepoWithAnsible.git`
 
 ---
 # Where Ansible shines!
