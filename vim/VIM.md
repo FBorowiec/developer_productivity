@@ -316,6 +316,10 @@ _Exercise 2:_
 
 ---
 
+# Setting up our first `.vimrc`
+
+---
+
 # Generally recommended plugins
 
 * `tpope/vim-fugitive`
